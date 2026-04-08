@@ -6,7 +6,7 @@ RUN apt-get update \
   COPY . /tmp/tippecanoe-src
   WORKDIR /tmp/tippecanoe-src
 
-  RUN make 
+  RUN make -j && make install
 
   CMD make test
 
